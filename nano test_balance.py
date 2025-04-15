@@ -14,7 +14,6 @@ accountAPI = Account(
 
 try:
     balance = accountAPI.get_account_balance("USDT")
-    usdt = balance['data'][0]['details'][0]['cashBal']
-    print(f"Баланс USDT: {usdt}")
+    print(balance)
 except Exception as e:
-    print(f"Помилка: {e}")
+    print("Помилка:", e)
