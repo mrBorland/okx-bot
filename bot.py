@@ -16,7 +16,8 @@ async def withdraw(update: Update, context: ContextTypes.DEFAULT_TYPE): if updat
 
 async def balance(update: Update, context: ContextTypes.DEFAULT_TYPE): if update.effective_chat.id != ALLOWED_CHAT_ID: return try: balance = accountAPI.get_account_balance("USDT") usdt = balance['data'][0]['details'][0]['cashBal'] await update.message.reply_text(f"Баланс USDT: {usdt}") except Exception as e: await update.message.reply_text(f"Помилка: {e}")
 
-app = ApplicationBuilder().token(TOKEN).build() app.add_handler(CommandHandler("start", start)) app.add_handler(CommandHandler("farm", farm)) app.add_handler(CommandHandler("status", status)) app.add_handler(CommandHandler("withdraw", withdraw)) app.add_handler(CommandHandler("balance", balance))
+app = ApplicationBuilder().token(TOKEN).build()
+
+app.add_handler(CommandHandler("start", start)) app.add_handler(CommandHandler("farm", farm)) app.add_handler(CommandHandler("status", status)) app.add_handler(CommandHandler("withdraw", withdraw)) app.add_handler(CommandHandler("balance", balance))
 
 app.run_polling()
-Update bot.py
