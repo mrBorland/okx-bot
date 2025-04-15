@@ -4,14 +4,14 @@
 git config --global user.name "MrBorland"
 git config --global user.email "borlandx54@example.com"
 
-# Ініціалізація репозиторію (лише якщо ще не створений .git)
+# Ініціалізація репозиторію
 git init
 git add .
 git commit -m "Автоматичне оновлення з VPS"
 
 # Токен GitHub
 TOKEN="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"
-REPO="github.com/mrBorland/okx-бот.git"
+REPO="github.com/mrBorland/okx-bot.git"
 
 # Додавання віддаленого репозиторію
 git remote remove origin 2>/dev/null
