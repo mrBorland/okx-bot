@@ -10,8 +10,8 @@ git add .
 git commit -m "Автоматичне оновлення з VPS"
 
 # Токен GitHub
-TOKEN="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"
-REPO="github.com/г-нБорланд/okx-бот.git"
+TOKEN="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"
+REPO="github.com/mrBorland/okx-бот.git"
 
 # Додавання віддаленого репозиторію
 git remote remove origin 2>/dev/null
