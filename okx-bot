@@ -1,0 +1,25 @@
+from okx.Account import Account
+import json
+
+api_key = '8ce4bd62-9328-495e-9556-2bf1107b3ac2'
+secret_key = 'AB2C36344430A6080F3C5645155074B3'
+passphrase = 'Slipknot221989@'
+
+account = Account(
+    api_key=api_key,
+    api_secret_key=secret_key,
+    passphrase=passphrase,
+    use_server_time=True,
+    flag='0'  # 0 — реальний акаунт, 1 — paper
+)
+
+params = {
+    'ccy': 'USDT',
+    'amt': '2.00',
+    'dest': '4',
+    'toAddr': 'TTb8QfyLAsXtTyZZ1SZiCUZt6H6PfJb3Wo',
+    'chain': 'USDT-TRC20'
+}
+
+response = account.withdrawal(params)
+print("Результат:", json.dumps(response, indent=2))
